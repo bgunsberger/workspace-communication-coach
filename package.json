@@ -14,7 +14,7 @@
     "run": "node src/cli.js run",
     "infographic": "node src/cli.js infographic",
     "example:render": "node src/cli.js render --report-file examples/synthetic-report-output.json --title \"Synthetic Communication Reflection\"",
-    "example:infographic": "node src/cli.js infographic --reports-dir examples/reports --out-dir examples"
+    "example:infographic": "node src/cli.js infographic --reports-dir examples/reports --out-dir examples/generated"
   },
   "engines": {
     "node": ">=20"

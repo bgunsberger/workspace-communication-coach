@@ -3,5 +3,6 @@
 .tokens/
 credentials/
 /reports/
+/examples/generated/
 node_modules/
 npm-debug.log*

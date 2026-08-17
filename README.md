@@ -33,6 +33,16 @@ The LLM writes structured JSON. The renderer applies Google Docs formatting with
 
 ## Setup
 
+Clone the repo and check the synthetic example first:
+
+```sh
+git clone https://github.com/bgunsberger/workspace-communication-coach.git
+cd workspace-communication-coach
+npm run example:infographic
+```
+
+The example command uses synthetic report data and writes generated files to `examples/generated/`.
+
 1. Create a Google Cloud project.
 2. Configure an OAuth consent screen.
 3. Create an OAuth client ID for a Desktop app.
@@ -73,6 +83,8 @@ Generate a report JSON:
 ```sh
 npm run generate -- --input reports/raw-2026-06-05.json --out reports/communication-reflection-2026-06-05.json
 ```
+
+This step requires `ANTHROPIC_API_KEY` in `.env`.
 
 Render the formatted Google Doc:
 
