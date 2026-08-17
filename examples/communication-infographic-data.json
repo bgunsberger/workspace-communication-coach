@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-08-17T08:43:15.185Z",
+  "scoringNote": "Communication score is an editorial index based on clarity, constructive action, follow-through, sentiment, and tone risk.",
+  "reports": [
+    {
+      "date": "2026-06-05",
+      "reportDate": "Friday, June 5, 2026",
+      "counts": {
+        "gmail": 2,
+        "chat": 4,
+        "meet": 5
+      },
+      "total": 11,
+      "score": 79,
+      "sentiment": "The day reads as practical and constructive, with communication focused on finis",
+      "sentimentTone": {
+        "name": "Steady",
+        "color": "#4c9a50"
+      },
+      "theme": "Captioning and accessibility work for a launch video."
+    }
+  ],
+  "missingDates": [],
+  "totals": {
+    "gmail": 2,
+    "chat": 4,
+    "meet": 5,
+    "all": 11,
+    "days": 1,
+    "averageScore": 79
+  }
+}

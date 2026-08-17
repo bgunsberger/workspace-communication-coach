@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Communication Reflection Report",
+  "type": "object",
+  "required": [
+    "title",
+    "reportDate",
+    "timezone",
+    "overview",
+    "thingsDoneWell",
+    "thingsToImprove",
+    "followUps",
+    "personalityLens",
+    "overallSentiment"
+  ],
+  "properties": {
+    "title": { "type": "string" },
+    "reportDate": { "type": "string" },
+    "timezone": { "type": "string" },
+    "overview": {
+      "type": "object",
+      "required": ["coverage", "topics"],
+      "properties": {
+        "coverage": { "type": "array", "items": { "type": "string" } },
+        "topics": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "thingsDoneWell": { "type": "array", "items": { "type": "string" } },
+    "thingsToImprove": {
+      "type": "object",
+      "required": ["paragraphs", "examples"],
+      "properties": {
+        "paragraphs": { "type": "array", "items": { "type": "string" } },
+        "examples": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "followUps": { "type": "array", "items": { "type": "string" } },
+    "personalityLens": {
+      "type": "object",
+      "required": ["paragraphs", "examples"],
+      "properties": {
+        "paragraphs": { "type": "array", "items": { "type": "string" } },
+        "examples": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "overallSentiment": { "type": "array", "items": { "type": "string" } }
+  }
+}

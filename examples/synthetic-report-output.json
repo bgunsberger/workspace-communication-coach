@@ -1,0 +1,60 @@
+{
+  "title": "Communication Reflection - 2026-06-05",
+  "reportDate": "Friday, June 5, 2026",
+  "timezone": "Australia/Sydney",
+  "overview": {
+    "coverage": [
+      "Gmail sent: 2",
+      "Chat authored messages: 4",
+      "Meet transcript entries: 5 across 1 meeting transcript"
+    ],
+    "topics": [
+      "Captioning and accessibility work for a launch video.",
+      "Workflow feedback around a proof-of-concept production fix.",
+      "Decision clarity around final delivery versus backup edits.",
+      "Ownership clarity before applying a note across related shots.",
+      "Review judgement around whether a technically successful result matches the intended look."
+    ]
+  },
+  "thingsDoneWell": [
+    "You translated a vague captioning request into an implementable delivery detail by providing an SRT file and naming how captions would work across platforms.",
+    "You asked for specific process feedback rather than general approval. That makes the proof of concept easier to evaluate.",
+    "You made a pragmatic delivery call by suggesting the team skip backup edits when the final version was ready."
+  ],
+  "thingsToImprove": {
+    "paragraphs": [
+      "The main improvement area is ownership clarity. You identified that a note may be valid, and the next message should name who decides whether it applies across all related shots.",
+      "The proof-of-concept thread is ready for more structure. It needs success criteria, approval state, and an owner if it is becoming a repeatable workflow."
+    ],
+    "examples": [
+      "Owner wrapper: this note is valid, but we need one owner to decide whether it applies across all related shots.",
+      "Process wrapper: please give feedback on visual quality, time saved, repeatability, and any approval concerns.",
+      "Delivery wrapper: if the final version is approved, we can skip backup edit variants and deliver the final."
+    ]
+  },
+  "followUps": [
+    "Confirm whether the SRT caption workflow works on the target platforms.",
+    "Collect proof-of-concept feedback on quality, time saved, and repeatability.",
+    "Assign an owner for deciding whether the note applies across related shots.",
+    "Confirm whether backup edits can be removed from the delivery path.",
+    "Document the proof-of-concept workflow if it becomes repeatable.",
+    "Decide whether the technically successful result is acceptable for the intended look."
+  ],
+  "personalityLens": {
+    "paragraphs": [
+      "High conscientiousness shows up in the captioning detail and the desire to make a workflow repeatable rather than treating it as a one-off fix.",
+      "High open-mindedness shows up in the willingness to test a new workflow and ask whether it can become a broader production capability.",
+      "High assertiveness helps you move the team toward a decision, especially around skipping backup edits and identifying ownership gaps."
+    ],
+    "examples": [
+      "Conscientiousness: turning captions into an SRT/platform compatibility question.",
+      "Open-mindedness: testing whether a proof of concept can generalise into a repeatable workflow.",
+      "Assertiveness: proposing a clear delivery path when finals are ready.",
+      "Agreeableness: asking for feedback in a way that invites collaborators into the process."
+    ]
+  },
+  "overallSentiment": [
+    "The day reads as practical and constructive, with communication focused on finishing work and turning experiments into usable process.",
+    "The coaching watch-out is to add explicit ownership and approval state when a promising experiment starts becoming a real workflow."
+  ]
+}

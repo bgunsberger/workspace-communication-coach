@@ -1,0 +1,55 @@
+{
+  "date": "2026-06-05",
+  "timezoneOffset": "+10:00",
+  "identity": {
+    "email": "person@example.com",
+    "userName": "users/1234567890"
+  },
+  "counts": {
+    "gmailSent": 2,
+    "chatMessages": 4,
+    "meetTranscriptEntries": 5,
+    "meetTranscripts": 1
+  },
+  "gmail": [
+    {
+      "timestamp": "2026-06-05T01:15:00.000Z",
+      "to": "team@example.com",
+      "subject": "Launch video captions",
+      "text": "I exported an SRT file so captions can be enabled on each platform."
+    }
+  ],
+  "chat": [
+    {
+      "spaceDisplayName": "Project Leadership",
+      "spaceType": "SPACE",
+      "timestamp": "2026-06-05T02:10:00.000Z",
+      "text": "The current workflow works as a proof of concept. I would like feedback on quality, time saved, and whether it feels repeatable."
+    },
+    {
+      "spaceDisplayName": "",
+      "spaceType": "DIRECT_MESSAGE",
+      "timestamp": "2026-06-05T03:20:00.000Z",
+      "text": "I think the note is valid, but we need a clearer owner before changing all related shots."
+    }
+  ],
+  "meet": {
+    "transcripts": [
+      {
+        "conferenceRecord": "conferenceRecords/synthetic",
+        "transcriptName": "conferenceRecords/synthetic/transcripts/one",
+        "myEntryCount": 5
+      }
+    ],
+    "entries": [
+      {
+        "timestamp": "2026-06-05T04:00:00.000Z",
+        "text": "If the final version is ready, we can skip the backup edit and deliver the real final."
+      },
+      {
+        "timestamp": "2026-06-05T04:03:00.000Z",
+        "text": "The technique is working, but the result is different from the expected look. We need to decide whether that difference is acceptable."
+      }
+    ]
+  }
+}
