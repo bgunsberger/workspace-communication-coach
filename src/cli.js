@@ -57,8 +57,10 @@ async function main() {
     const report = await generateReport({
       rawDay,
       promptFile: options.prompt ?? "prompts/daily-reflection-writer.md",
-      anthropicApiKey: options.anthropicApiKey ?? config.anthropicApiKey,
-      anthropicModel: options.model ?? config.anthropicModel
+      provider: options.provider ?? config.llmProvider,
+      credential: options.credential ?? options.apiKey ?? config.llmCredential,
+      credentialType: options.credentialType ?? config.llmCredentialType,
+      model: options.model ?? config.llmModel
     });
     saveJson(out, report);
     console.log(JSON.stringify({ out, title: report.title }, null, 2));
@@ -95,8 +97,10 @@ async function main() {
     const report = await generateReport({
       rawDay,
       promptFile: options.prompt ?? "prompts/daily-reflection-writer.md",
-      anthropicApiKey: options.anthropicApiKey ?? config.anthropicApiKey,
-      anthropicModel: options.model ?? config.anthropicModel
+      provider: options.provider ?? config.llmProvider,
+      credential: options.credential ?? options.apiKey ?? config.llmCredential,
+      credentialType: options.credentialType ?? config.llmCredentialType,
+      model: options.model ?? config.llmModel
     });
     saveJson(reportFile, report);
     const doc = await renderGoogleDoc({
@@ -148,9 +152,9 @@ function printHelp() {
 Commands:
   auth
   collect --date YYYY-MM-DD [--out reports/raw-YYYY-MM-DD.json]
-  generate --input reports/raw-YYYY-MM-DD.json [--out reports/communication-reflection-YYYY-MM-DD.json]
+  generate --input reports/raw-YYYY-MM-DD.json [--provider mock|openai|anthropic] [--out reports/communication-reflection-YYYY-MM-DD.json]
   render --report-file reports/communication-reflection-YYYY-MM-DD.json [--document-id DOC_ID]
-  run --date YYYY-MM-DD
+  run --date YYYY-MM-DD [--provider mock|openai|anthropic]
   infographic [--reports-dir reports] [--out-dir reports]
 `);
 }

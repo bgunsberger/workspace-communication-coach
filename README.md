@@ -22,7 +22,7 @@ It is designed for self-reflection. It should not be used for employee surveilla
 Google OAuth
   -> Gmail / Chat / Meet collectors
   -> raw daily JSON
-  -> LLM report prompt
+  -> provider-neutral LLM report prompt
   -> reflection report JSON
   -> deterministic Google Docs renderer
   -> Google Doc URL
@@ -58,10 +58,24 @@ mkdir -p credentials
 cp ~/Downloads/client_secret_*.json credentials/oauth-client.json
 ```
 
-6. Copy `.env.example` to `.env` and add your Anthropic API key if you want automatic report generation:
+6. Copy `.env.example` to `.env`. The default `LLM_PROVIDER=mock` lets you test report generation without an LLM account:
 
 ```sh
 cp .env.example .env
+```
+
+For model-backed generation, set one of these:
+
+```env
+LLM_PROVIDER=openai
+LLM_CREDENTIAL=...
+LLM_MODEL=gpt-5.6
+```
+
+```env
+LLM_PROVIDER=anthropic
+LLM_CREDENTIAL=...
+LLM_MODEL=claude-sonnet-4-5
 ```
 
 ## Run
@@ -84,7 +98,7 @@ Generate a report JSON:
 npm run generate -- --input reports/raw-2026-06-05.json --out reports/communication-reflection-2026-06-05.json
 ```
 
-This step requires `ANTHROPIC_API_KEY` in `.env`.
+This step uses `LLM_PROVIDER` from `.env`. Use `LLM_PROVIDER=mock` for deterministic sandbox output, or `openai`/`anthropic` with `LLM_CREDENTIAL` and `LLM_MODEL`.
 
 Render the formatted Google Doc:
 
@@ -113,6 +127,18 @@ message.sender?.name === `users/${identity.sub}`
 ```
 
 This means the tool collects the authenticated user's authored messages, not other people's messages.
+
+## LLM Providers
+
+The LLM step is intentionally small and replaceable. `src/llm/generate-report.js` supports:
+
+- `mock`: deterministic local output for demos, tests, and sandbox checks.
+- `openai`: calls the OpenAI Responses API using a bearer credential.
+- `anthropic`: calls the Anthropic Messages API using an API key by default, or a bearer credential when `LLM_CREDENTIAL_TYPE=bearer`.
+
+Older `LLM_API_KEY`, `OPENAI_API_KEY`, `OPENAI_MODEL`, `ANTHROPIC_API_KEY`, and `ANTHROPIC_MODEL` environment variables are still recognised as fallbacks.
+
+See `docs/provider-auth.md` for the recommended hosted web-app authentication shape.
 
 ## Privacy
 
