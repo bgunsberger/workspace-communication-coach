@@ -2,6 +2,6 @@
 .env
 .tokens/
 credentials/
-reports/
+/reports/
 node_modules/
 npm-debug.log*
